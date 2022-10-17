@@ -1,0 +1,30 @@
+{
+    "products": [
+        {
+            "name": "Leupold LTO Tracker Wärmebildkamera",
+            "id": "1",
+            "realPrice": 1349,
+            "discountPrice": 1609,
+            "tax": 0.19
+        },
+        {
+            "name": "Wärmebildgerät Scout TS 24",
+            "id": "2",
+            "realPrice": 2465,
+            "tax": 0.19
+        },
+        {
+            "name": "Nightlux JSA 510x FE Wärmebildkamera",
+            "id": "3",
+            "realPrice": 989,
+            "tax": 0.19
+        },
+        {
+            "name": "Wärmebildkamera Scout III 640 30hz",
+            "id": "4",
+            "realPrice": 2349,
+            "discountPrice": 3109,
+            "tax": 0.19
+        }
+    ]
+}

@@ -1,0 +1,1140 @@
+:root {
+  --theme-main: #000000;
+  --theme-details: #f0f0f0;
+  --content-secondary: #64666A;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  margin: 0;
+}
+body::backdrop{
+    width: 100%;
+    height: 100%;
+}
+.top {
+  width: 100%;
+  height: 100px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blur {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+    z-index: 8999;
+    display: none;
+    height: 100vh;
+}
+.blur.show {
+    display: block;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Logo-Icon {
+  width: 64.81px;
+  height: 60px;
+  left: 25px;
+  top: 20px;
+  margin-right: 10px;
+}
+.name {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600px;
+  line-height: 27px;
+  letter-spacing: 0.25em;
+  text-align: center;
+  color: var(--theme-main);
+  text-transform: uppercase;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.dropbtn {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #FFFFFF;
+  top: 80px;
+}
+.dropDownLine {
+margin-left: 28%;
+width: 40%;
+background-color: #95D4B9;
+height: 3px;
+margin-top: 27px;
+justify-content: center;
+align-items: center;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin-left: 10px;
+}
+.show {display:block;}
+.navigation_item {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.vector {
+  z-index: 1;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.elipse {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dropDownIconWrapper {
+  position: relative;
+  margin-left: 10px;
+  height: 12px;
+  width: 12px;
+}
+.hero {
+  background: linear-gradient(180deg, #e3f9f0 0%, #ffffff 73.44%);
+  width: 100%;
+}
+.about-us {
+  width: 300px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 150%;
+  margin-top: 100px;
+  margin-left: 360px;
+  margin-bottom: 200px;
+}
+.about-us-text-1 {
+  width: 480px;
+  height: 173px;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 150%;
+}
+.about-us-text-2 {
+  width: 480px;
+  height: 253px;
+  font-family: Montserrat;
+  font-size: 15px;
+  line-height: 150%;
+}
+.forest-trail {
+  position: absolute;
+  top: 900px;
+  left: 920px;
+  border-radius: 6px;
+}
+.topographical-map {
+  position: absolute;
+  top: 1050px;
+  left: 1188px;
+  border-radius: 6px;
+}
+.drop_down_1_text {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #f8fcff;
+  width: 1080px;
+  height: 381px;
+}
+.dropdown.show {
+  display: block;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11.5px 30px;
+  position: absolute;
+  width: 174px;
+  height: 50px;
+  left: 370px;
+  top: 1406px;
+  background: #c1ebdb;
+  border: none;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9000;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 400px;
+}
+.modal-content-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonYes {
+  justify-content: center;
+  align-items: center;
+}
+.buttonNo {
+  justify-content: center;
+  align-items: center;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ifno {
+  display: none;
+}
+
+.ifno  {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.show-restriction .ifno {
+  display: flex;
+  width: 100%;
+}
+.show-restriction .modal-content-text {
+    display: none;
+}
+.show-restriction ~ button{
+    display: none;
+}
+.deer {
+ max-width: 100%;
+ margin-bottom: 12px;
+}
+.products {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.products__title{
+  margin-bottom: 50px;
+}
+.products__list {
+  display: flex;
+  gap: 20px;
+}
+.product {
+  width: 280px;
+}
+.product__description {
+  margin-top: 20px;
+  color: #64666A;
+  font-size: 14px;
+  margin-bottom: 100px;
+}
+.product__date {
+  margin-bottom: 17px;
+  font-size: 13px;
+  color: #64666A;
+  font-style: medium;
+}
+.product__title{
+  font-weight: bold;
+  font-size: 18px;
+}
+.product__img{
+  border-radius: 2%;
+}
+.mail {
+  max-width: 1920px;
+  background-color: #000000;
+  color: white;
+  display: flex;
+}
+.deer-img {
+  padding-top: 50px;
+  margin-left: 160px;
+}
+.newsletter__header {
+  max-width: 580px;
+  margin-left: 60px;
+}
+.newsletter {
+  padding-top: 100px;
+  margin-bottom: 50px;
+  font-size: 42px;
+}
+.newsletter__information {
+  position: relative;
+  font-size: 18px;
+}
+.why__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.why__wrapper > div {
+  /*flex: 1 1 50%;*/
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.check {
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+}
+.subscription {
+  margin-top: 107px;
+  position: relative;
+}
+.agree {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.EmpfohleneProdukte {
+  max-width: 1920px;
+  display: flex;
+  background-color:white;
+}
+.arrow {
+  margin-left: 100px;
+}
+#agreementField + label .vec {
+ display: none;
+}
+#agreementField:checked + label .vec {
+  display: inline;
+ }
+.iconsWrapper {
+  position: relative;  
+  width: 16px;
+  height: 16px;
+  display: inline-block;       
+  margin-right: 10px;
+}
+.rec, .vec {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.agree {
+  display: flex;
+  align-items: center;
+}
+.subscription{
+  display: flex;
+}
+#subscriptionEMail {
+  height: 60px;
+  width: 580px;
+  background-color: #191919;
+  border-radius: 5px;
+  border: none;
+  color: #666;
+  font-size: 18px SemiBold 600;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 185px 0 25px;
+}
+.subscriptionButton {
+  width: 177px;
+  height: 53px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 400px;
+  margin-top: 3.5px;
+  border: none;
+}
+.subscriptionContent {
+  width: 400px;
+  height: 200px;
+  background-color: #008254;
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #888;
+  display: none;
+  position: fixed;
+  left: calc(50% - 200px);
+  top: 20px;
+  border-radius: 20px;
+  z-index: 2;
+  opacity: 95%;
+}
+.subscription-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.subscriptionAgreement {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 165px;
+}
+.subscriptionContentText {
+  align-items: center;
+  justify-content: center;
+}
+.empfohleneProdukteHeader {
+  display: flex;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 240px;
+}
+.arrowsWrapper {
+  margin-left: 700px;
+  margin-top: 15px;
+}
+.itemSelling {
+  display: flex;
+ margin-right: 20px;
+}
+.itemSellingInfo {
+  height: 459px;
+  width: auto;
+  border:1px solid #D8D9DA;
+}
+.realPrice {
+  color: #008254;
+  font-size: 21px;
+}
+.discountPrice {
+  color: #64666A;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+.tax {
+  font-size: 12px;
+  color: #64666A;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+.itemSellingInfoContent {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  transition: all 0.5s;
+}
+.itemSellingInfoContentPicture1{
+  margin-bottom: 35px;
+  margin-right: 20px;
+}
+.prices {
+  margin-top: 30px;
+  margin-right: 20px;
+}
+.itemSellingButton {
+  background-color: #C1EBDB;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5px;
+}
+.empfohleneProdukteItems {
+  place-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  margin-bottom: 200px;
+}
+.blackPrice {
+  color: black;
+  font-size: 21px;
+}
+.Details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+}
+.footer {
+  padding-left: 225px;
+  display: flex;
+  background-color: #FFF7EA;
+  padding-top: 92px;
+  background-color: #FAF1E3;;
+  width: 100%;
+}  
+.footerLogo {
+  display: flex;
+  padding-bottom: 66px;
+}
+.footerLogo-Icon {
+  height: 60px;
+  width: 64px;
+}
+.footerName {
+  font-size: 22px;
+  padding-left: 15px;
+  font-family: "Montserrat";
+  color: var(--theme-main);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.aboutUppercase {
+  font-size: 20px;
+}
+.aboutText {
+  font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 400px;
+}
+.footerAbout {
+  margin-bottom: 50px;
+  font-weight: 600px;
+}
+.footerLinks {
+  font-family: Montserrat;
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.footerUnderscore {
+  margin-bottom: 28px;
+}
+.footerEmailGray {
+  color: #666;
+}
+.quickLinksHeader {
+ margin-top: 125px;
+ font-size: 21px;
+}
+.quickLinksUnderscore {
+  margin-top: 25px;
+}
+.quickLinks {
+  margin-left: 100px;
+}
+.quickLinksNames {
+  margin-top: 30px;
+  font-size: 15px;
+}
+.newsletterAbonnieren {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.newsletterAbonnierenUnderscore {
+  margin-top: 25px;
+  margin-bottom: 35px;
+} 
+#searchBarText {
+  height: 40px;
+  width: 230px;
+  border: 1px solid #95D4B9;
+  border-radius: 99px;
+  outline: none;
+  padding: 0 20px;
+}
+.newsletterAbonnierenText {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.newsletterAbonnierenAdvantages {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsletterAbonnierenAdvantages > div {
+  /*flex: 1 1 50%;*/
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.newsletterAbonnierenAdvantagesBackgroundCircle {
+  height: 18px;
+  width: 18px;
+  border-radius: 99px;
+  background-color: #95D4B9;
+  z-index: 0;
+  position: relative;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.newsletterAbonnierenAdvantagesAccept {
+  z-index: 1;
+  bottom: 5px;
+}
+.newsletterAbonnierenAdvantages1 {
+  display: flex;
+  gap: 7px;
+}
+.productHeading {
+margin-top: 50px;
+max-width: 1082px;
+margin: 50px 75px 75px 250px;
+display: flex;
+}
+.productPhotoFrame{
+ border: 1px solid #D8D9DA;
+ width: 480px;
+ border-radius: 5px;
+ padding: 30px 30px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.productPhotoFramePicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productInformation {
+  margin-left: 100px;
+}
+.productInformationTitle {
+ font-size: 32px;
+ font-weight: 600;
+  margin-bottom: 24px;
+}
+.productInformationRow {
+  display: flex;
+  border-bottom: 1px solid #D8D9DA;
+  padding-bottom: 8px;
+  margin-top: 8px;
+}
+.productInformationLable {
+  width: 45%;
+}
+.productInformationTable {
+  margin-bottom: 25px;
+}
+.jetztBeiGrube {
+  max-width: 500px;
+  background-color: #C1EBDB;
+  display: flex;
+  height: 101px;
+}
+.buyPicture {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  margin-left: 66px;
+  background-color: white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 23px;
+  margin-right: 25px;
+}
+.jetztBeiGrubeTop {
+  margin-top: 15px;
+  font-size: 24px;
+}
+.jetztBeiGrubeBot {
+font-size: 16px;
+margin-bottom: 150px;
+}
+.listGroup li.hide {
+  display: none;
+}
+.reviews {
+  margin-left: 410px;
+}
+.reviewsTop {
+  display: flex;
+  margin-bottom: 80px;
+}
+.star {
+  max-width: 16px;
+  max-height: 16px;
+  margin-top: 3px;
+  gap: 5px;
+}
+.reviewsTopTextFirst{
+  font-size: 20px;
+  margin-right: 90px;
+}
+.reviewsTopText {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.starsWrapper {
+  display: flex;
+  gap: 5px;
+  margin-right: 10px;
+}
+.reviewsTopTextLast {
+  font-size: 14px;
+  margin-top: 3px;
+}
+.reviewsReal1{ 
+max-width: 450px;
+max-height: 249px;
+}
+.reviewsReal1Top {
+  display: flex;
+}
+.reviewsReal1Topname {
+  width: 42px;
+  height: 42px;
+  background-color: #C1EBDB;
+  border-radius: 59px;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin-right: 15px;
+}
+.reviewsReal1TopMainName{
+margin-top: 11px;
+margin-right: 102px;
+}
+.starsWrapper1 {
+  margin-top: 7px;
+}
+.reviewsReal1Date {
+  margin-top: 9px;
+  margin-left: 15px;
+}
+.reviewsReal1Comment {
+  margin-top: 20px;
+  margin-left: 56px;
+  margin-bottom: 45px;
+}
+.reviewsReal1wrapper {
+  display: flex;
+  gap: 100px;
+}
+.reviews4 {
+  margin-bottom: 100px;
+}
+.reviewsBottomVectorLeft, .reviewsBottomVectorRight {
+  margin-right: 15px;
+  max-height: 13px; 
+  margin-top: 9px;
+  margin-left: 15px;
+}
+.reviewsBottom {
+  display: flex;
+  margin-bottom: 75px;
+}
+.aWrapper {
+  display: flex;
+  gap: 10px;
+}
+.a {
+  border: 1px solid #D8D9DA;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviewsBottomVectorRight {
+  margin-right: 610px;
+}
+.leaveReview {
+  display: flex;
+  height: 42px;
+  width: 181px;
+  background-color: #C1EBDB;
+  align-items: center;
+  justify-content: center;
+}
+.additionalInformationHeader {
+  max-width: 780px;
+  align-items: center;
+}
+.additionalInformationHeaderHeader {
+  margin-bottom: 25px;
+}
+.additionalInformationHeaderInfo {
+margin-bottom: 75px;
+}
+.like, .tweet, .facebook, .mailen {
+  width: 120px;
+  height: 50px;
+  background-color: #0082541A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.likeImage {
+  margin-right: 10px;
+}
+.additionalInformationInteractions {
+  display: flex;
+  gap: 6px;
+}
+.tweet {
+background-color: #2AA4F11A;
+}
+.facebook {
+background-color: #005FB71A;
+}
+.mailen {
+background-color: #FFF7EA;
+}
+.additionalInformation {
+  margin-bottom: 15px;
+}
+.line {
+  height: 1px;
+  background-color: #D8D9DA;
+  margin-bottom: 75px;
+  margin-left: -410px;
+}
+.itemSellingInfoWrapper {
+  display: flex;
+  gap: 20px;
+  width: 1160px; 
+}
+.itemSellingButtons {
+  display: flex;
+  gap: 10px;
+  width: 200px;
+}
+.itemKaufenButton {
+  background-color: #6AADEA;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  width: 93px;
+}
+.ahnlicheProdukte {
+  width: 1160px;
+  margin-left: -170px;
+}
+.itemSellingButtonAnother {
+  background-color: #C1EBDB;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5px;
+  width: 117px;
+}
+.subscriptionButton2 {
+  width: 157px;
+  height: 45px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #ffffff;
+  font-size: 16px;
+ margin-left: 217px;
+ margin-top: 7px;
+ border: 1px solid #666;
+}
+#subscriptionEMail2 {
+  height: 60px;
+  width: 580px;
+  background-color: #FAF1E3;
+  border-radius: 5px;
+  border: 1px solid #666;
+  font-size: 18px SemiBold 600;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 185px 0 25px;
+}
+.footerBottomWrapper {
+  display: flex;
+  margin-right: 457px ;
+  max-width: 500px;
+  gap: 79px;
+}
+.footerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 785px;
+}
+.footerBottomItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerBottomTextWrapper {
+  font-size: 16px;
+  width: 182px;
+  height: 45px;
+  margin-left: 13px;
+  margin-top: 25px;
+}
+.smallText {
+  font-size: 14px;
+}
+.footerBotomGrayText {
+  width: 380px;
+  height: 42px;
+  color: #64666A;
+  margin-top: 10px;
+}
+.line2 {
+  height: 1px;
+  background-color: #D8D9DA;
+  margin-left: -1410px;
+} 
+.footerWrapper {
+  padding-left: 225px;
+  display: flex;
+  padding-top: 30px ;
+  margin-bottom: 30px;
+}
+.footerCopyrightLeft {
+  padding-top: 38px;
+  padding-left: 225px;
+  color: #64666A;
+  font-size: 14px;
+  margin-right: 742px;
+  margin-bottom: 35px;
+}
+.footerCopyright {
+  background-color: #FAF1E3;
+  display: flex;
+}
+.footerCopyrightRight {
+  padding-top: 35px;
+  display: flex;
+  gap: 20px;
+  color: #64666A;
+}
+.searchOptionsEmpty {
+  width: 330px;
+  background-color: white;
+  position: absolute;
+  margin-left: 1300px;
+  margin-top: 72px;
+  border: 1px solid #95D4B9;
+  border-radius: 3%;
+}
+.searchOptionsEmptyPlace {
+  width: 100%;
+}
+.searchOptionsLine {
+  height: 1px;
+  background-color: red;
+  width: 100%;
+}
+.product-item {
+  padding: 10px 0 0 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 17px;
+  justify-content: center;
+  align-items: center;
+}
+.product-image {
+  width: 80px;
+}
+.product-item:not(:last-child) {
+  padding: 10px 0 0 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 17px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #C1EBDB;
+  height: 114px;
+}
+.clothesPageHeroTopLeftLine {
+  height: 5px;
+  background-color: #008254;
+  width: 80px;
+  margin-top: 25px;
+}
+.clothesPageHeroTop {
+  margin-left: 400px;
+  margin-bottom: 50px;
+}
+.clothesPageHero {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.clothesPageHeroTopLeft {
+  margin-right: 90px;
+}
+.clothesPageHeroTop {
+  display: flex;
+}
+.clothesPageHeroTopRight {
+  line-height: 175%;
+  margin-left: 100px;
+  font-size: 15px;
+}
+.clothesPageHeroMiddleTopLineWrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.clothesPageHeroMiddleTopLine {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  width: 380px;
+  border: 1px solid #D8D9DA;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.shape {
+  height: 10px;
+  width: 10px;
+}
+.clothesPageHeroMiddleTopLineBottom {
+  margin-right: 5px;
+}
+.combinedShape {
+  margin-right: 5px;
+}
+.clothesPageHeroMiddleTopLineImg {
+  width: 143px;
+  height: 180px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+.clothesPageHeroMiddleTopLineBuy {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF7EA;
+  border-radius: 5px ;
+}
+.clothesPageHeroMiddleTopLineBuyWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.clothesPageHeroMiddleTopLineBuyText {
+  color: #64666A;
+  font-size: 14px;
+}
+.clothesPageHeroTopLeftHeader {
+  font-size: 36px;
+}
+.readArticleButton {
+  background: #c1ebdb;
+  width: 174px;
+  height: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.clothesPageInformation {
+  padding-top: 100px;
+margin-left: 442px;
+}
+.clothesPageInformationH1 {
+  margin-bottom: 40px;
+}
+.clothesPageInformationA{
+  margin-bottom: 48px;
+}
+.clothesPageInformationGreen {
+  background-color: #C1EBDB;
+  width: 720px;
+  height: 205px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.clothesPageInformation {
+  margin-bottom: 100px;
+}
+.categoryJagdbekleidung {
+  position: absolute;
+  left: 494px;
+  top: 390px;
+  width: 329px;
+  height:87px;
+}
+.categoryEquipment {
+  position: absolute;
+  left: 840px;
+  top: 390px;
+  width: 329px;
+  height:87px;
+}
